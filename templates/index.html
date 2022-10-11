@@ -1,0 +1,26 @@
+    {% extends "base.html" %}
+
+    {% block conteudo %}
+
+    <h1> {{ sistema }} - {{ shop }}</h1>
+
+    <p> Login to continue</p>
+
+    {% set messagens = get_flashed_messages() %}
+    {% if messagens %}
+        <div>
+            {% for msg in messagens %}
+                {{msg}}
+            {% endfor %}
+        </div>
+    {% endif %}
+    <h5>
+        <form action="/autenticar" method="post" class="credentials-md">
+            User: <input type="text" name="usuario"><br>
+            Password: <input type="text" name="senha"><br>
+            <button type="submit">Login</button>
+
+        </form>
+    </h5>
+
+    {% endblock %}

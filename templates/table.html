@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h1>{{ shop }} - Client Insert</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Client</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for p in person %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.client }}</td>
+                <td>{{ p.model }}</td>
+                <td>{{ p.color }}</td>
+                <td>
+                    <a href="/delete/{{p.id}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <div class="add-person">
+        <a href="/add">Add Client</a>
+    </div>
+</div>
+
+{% endblock %}

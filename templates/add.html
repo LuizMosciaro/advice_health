@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    <h1>
+        Adding New Client
+    </h1>
+    <form action="/add" class="container" method="POST" id="addId">
+        <div class="row">
+            <label for="client">Client:</label>
+            <input type="text" name = "client" id="client" placeholder="Fullname">
+
+            <label for="model">Model:</label>
+            <select name="model" id="model">
+                <option value="Hatch" name = "hatch">Hatch</option>
+                <option value="Sedan" name = "sedan">Sedan</option>
+                <option value="Convertible" name = "convertible">Convertible</option>
+            </select>
+
+            <label for="color">Color:</label>
+            <select name="color" id="color">
+                <option value="Blue" name = "blue">Blue</option>
+                <option value="Yellow" name = "yellow">Yellow</option>
+                <option value="Gray" name = "gray">Gray</option>
+            </select>
+
+            <input type="checkbox" id="sale-avaiable" name="sale-avaiable" value="True">
+            <label for="sale-avaiable"> Sales Oportunity?</label><br>
+        </div>
+
+        <div>
+            <button type="submit" value='add' name="add-btn">Add</button>
+        </div>
+
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advice Health</title>
+    <head>
+        <style>
+            html {
+            text-align: center;
+            margin-top: 20%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            font-family: 'Lexend Deca'; 
+            color: wheat;   
+            background-size:100%;
+            background-position: 50% 100%;
+            background-image: linear-gradient(rgb(0, 0, 0) 45%,rgba(56, 56, 56, 0.878));
+            }
+            .links-md,.add-person {
+                font-weight: bold;
+            }
+            form {
+                border-radius: 15px 50px 30px;
+                background: linear-gradient(rgb(35, 31, 31),gray);
+                padding: 20px;
+                width: 150px;
+                height: 50px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                margin: auto;
+                color: wheat;
+            }
+            .container,.contato-md{
+                text-align: center;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: 60%;
+                font-family: 'Lexend Deca'; 
+            }
+            .row{
+                text-align: center;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                font-family: 'Lexend Deca'; 
+            }        
+            th {
+                background-color: gray;
+            }
+            
+            </style>
+    </head>
+</head>
+<body>
+    <nav>
+        <a href="/index" class="links-md">Index</a>
+        <a href="/contato" class="links-md">Contact</a>
+    </nav>
+
+    {% block conteudo %}
+    {% endblock %}
+
+</body>
+</html>
